@@ -113,11 +113,13 @@ In the `firmware/` directory:
 | Relative Offset | Register Name | Access | Description |
 |---|---|---|---|
 | `0x3000_0000` | `CTRL` | R/W | `[1:0]` alg_sel, `[2]` start pulse, `[3]` decrypt, `[6]` done, `[7]` valid |
+
 | `0x3000_0004` - `0x3000_0010` | `KEY` | R/W | 128-bit Key (Words 1–4) |
 | `0x3000_0014` - `0x3000_0020` | `NONCE` | R/W | 128-bit Nonce (Words 5–8) |
 | `0x3000_0024` - `0x3000_0030` | `AD` | R/W | 128-bit Associated Data (Words 9–12) |
 | `0x3000_0034` - `0x3000_0040` | `DATA_IN` | R/W | 128-bit Plaintext / Ciphertext Input |
 | `0x3000_0080` - `0x3000_008C` | `DATA_OUT` | RO | 128-bit Data Output |
 | `0x3000_0090` - `0x3000_009C` | `TAG_OUT` | RO | 128-bit Tag Output |
+
 | `0x3000_00A4` | `CYCLES_CUR` | RO | Active cycle counter of running algorithm |
 | `0x3000_00A8` | `CYCLES_LAST` | RO | Cycle count measured from last execution |
