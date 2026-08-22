@@ -1,0 +1,42 @@
+# Build artifacts - firmware
+firmware/*.o
+firmware/firmware.bin
+firmware/firmware.elf
+firmware/firmware.hex
+firmware/firmware.map
+firmware/bootloader.bin
+firmware/bootloader.elf
+firmware/bootloader.hex
+firmware/bootloader.dis
+firmware/firmware.dis
+
+# Build artifacts - vivado
+scripts/vivado/*.log
+scripts/vivado/*.jou
+scripts/vivado/*.str
+scripts/vivado/*.backup.*
+scripts/vivado/.Xil/
+scripts/vivado/synth_system.v
+scripts/vivado/synth_system.bit
+scripts/vivado/system_tb.vvp
+scripts/vivado/system.vcd
+scripts/vivado/sim_app.*
+scripts/vivado/bootloader.hex
+scripts/vivado/bootloader_tmp.*
+scripts/vivado/firmware.bin
+scripts/vivado/firmware.elf
+scripts/vivado/firmware.hex
+scripts/vivado/firmware.map
+scripts/vivado/report_*.txt
+scripts/vivado/report_*.rpt
+scripts/vivado/tab_*/
+scripts/vivado/table.txt
+scripts/vivado/webtalk*
+scripts/vivado/xelab.*
+scripts/vivado/xsim*
+scripts/vivado/xvlog.*
+
+# Editor / tool temp files
+.*.swp
+*.gds
+*.gds.gz
