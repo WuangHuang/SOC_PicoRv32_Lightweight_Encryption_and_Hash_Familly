@@ -62,8 +62,9 @@
 #define reg_crypto_cycles   (*(volatile uint32_t*)(CRYPTO_BASE + 0xA8))
 
 // Algorithm IDs
-#define ALG_DUMMY           0
-#define ALG_CUSTOM_1        1
+#define ALG_LICI           0
+#define ALG_PICCOLO        1
+#define ALG_KLEIN          2
 
 // UART Print Drivers
 void print_chr(char ch);
