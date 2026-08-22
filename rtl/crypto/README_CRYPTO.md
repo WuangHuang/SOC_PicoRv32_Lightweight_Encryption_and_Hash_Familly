@@ -109,8 +109,20 @@ In the `firmware/` directory:
 ---
 
 ## 5. APB Register Map (Base `0x3000_0000`)
+<!-- | Relative Offset | Register Name | Access | Description | |---|---|---|---|
+| `0x3000_0000` | `CTRL` | R/W | `[1:0]` alg_sel, `[2]` start pulse, `[3]` decrypt, `[6]` done, `[7]` valid |
 
-| Relative Offset | Register Name | Access | Description |
+| `0x3000_0004` - `0x3000_0010` | `KEY` | R/W | 128-bit Key (Words 1–4) |
+| `0x3000_0014` - `0x3000_0018` | `DATA_IN` | R/W | 128-bit Plaintext / Ciphertext Input |
+| `0x3000_001C` - `0x3000_0020` | `DATA_OUT` | RO | 128-bit Data Output |
+
+|  0x3000_0024  |  meas_status     
+| `0x3000_0028` | `CYCLES_CUR` | RO | Active cycle counter of running algorithm |
+| `0x3000_002C` | `CYCLES_LAST` | RO | Cycle count measured from last execution | -->
+
+
+<!-- Reference: Ms Kim  -->
+<!-- | Relative Offset | Register Name | Access | Description |
 |---|---|---|---|
 | `0x3000_0000` | `CTRL` | R/W | `[1:0]` alg_sel, `[2]` start pulse, `[3]` decrypt, `[6]` done, `[7]` valid |
 
@@ -122,4 +134,4 @@ In the `firmware/` directory:
 | `0x3000_0090` - `0x3000_009C` | `TAG_OUT` | RO | 128-bit Tag Output |
 
 | `0x3000_00A4` | `CYCLES_CUR` | RO | Active cycle counter of running algorithm |
-| `0x3000_00A8` | `CYCLES_LAST` | RO | Cycle count measured from last execution |
+| `0x3000_00A8` | `CYCLES_LAST` | RO | Cycle count measured from last execution | -->
