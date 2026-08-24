@@ -1,4 +1,5 @@
-VIVADO_BASE = /tools/Xilinx/Vivado/2024.2
+VIVADO_BASE = /xillin/2026.1
+
 VIVADO = $(VIVADO_BASE)/bin/vivado
 XVLOG = $(VIVADO_BASE)/bin/xvlog
 XELAB = $(VIVADO_BASE)/bin/xelab
@@ -18,8 +19,10 @@ SIM_RTL = \
 	../../rtl/peripherals/simpleuart.v \
 	../../rtl/peripherals/simple_spi_master.v \
 	../../rtl/crypto/aead_mmap_wrapper.v \
-	../../rtl/crypto/crypto_cluster.v \
-	../../rtl/crypto/dummy_crypto_core.v
+	../../rtl/crypto/Klein_Core.v \
+	../../rtl/crypto/LiCi_Core.v \
+	../../rtl/crypto/Piccolo_Core.v \
+	../../rtl/crypto/crypto_cluster.v 
 
 all: sim_iverilog
 
